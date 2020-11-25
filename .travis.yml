@@ -1,18 +1,21 @@
 # https://docs.travis-ci.com/user/languages/java/
 language: java
 jdk:
-#  - oraclejdk8
-#  - openjdk8
-#  - oraclejdk11
+  #  - oraclejdk8
+  #  - openjdk8
+  #  - oraclejdk11
   - oraclejdk15
   - openjdk15
 
-#dist: trusty
+  #dist: trusty
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
 
 #https://dzone.com/articles/travis-ci-tutorial-java-projects
 cache:
   directories:
-  - $HOME/.m2
+    - $HOME/.m2
 
 # https://docs.travis-ci.com/user/database-setup/#PostgreSQL
 #before_script:
@@ -22,7 +25,7 @@ cache:
 # https://docs.travis-ci.com/user/customizing-the-build#Building-Specific-Branches
 branches:
   only:
-  - master
+    - master
 
 # https://stackoverflow.com/a/49852690/548473:
 #services:
