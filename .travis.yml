@@ -2,8 +2,11 @@
 language: java
 jdk:
   - oraclejdk8
+  - openjdk8
   - oraclejdk15
   - openjdk15
+
+dist: trusty
 
 #https://dzone.com/articles/travis-ci-tutorial-java-projects
 cache:
