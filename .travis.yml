@@ -1,9 +1,9 @@
 # https://docs.travis-ci.com/user/languages/java/
 language: java
 jdk:
-  - oraclejdk8
-  - openjdk8
-  - oraclejdk11
+#  - oraclejdk8
+#  - openjdk8
+#  - oraclejdk11
   - oraclejdk15
   - openjdk15
 
